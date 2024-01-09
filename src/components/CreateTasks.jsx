@@ -33,18 +33,21 @@ export const CreateTasks = ({ tasks, setTasks }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        className="border-2 border-slate-400 bg-slate-100 rounded-md mr-4 h-12 w-64 px-1"
-        value={task.name}
-        onChange={(e) =>
-          setTask({ ...task, id: uuidv4(), name: e.target.value })
-        }
-      />
-      <button className="bg-cyan-500 rounded-md px-4 h-12 text-white">
-        Create
-      </button>
-    </form>
+    <div className=" text-center">
+      <header className="font-bold">To-Do App</header>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          className="border-2 border-slate-400 bg-slate-100 rounded-md mr-4 h-10 w-64 px-1"
+          value={task.name}
+          onChange={(e) =>
+            setTask({ ...task, id: uuidv4(), name: e.target.value })
+          }
+        />
+        <button className="bg-cyan-700 rounded-md px-4 h-10 text-white">
+          Create
+        </button>
+      </form>
+    </div>
   );
 };

@@ -23,7 +23,7 @@ export const ListTasks = ({ tasks, setTasks }) => {
   const statuses = ["todo", "inprogress", "done"];
 
   return (
-    <div className="flex gap-16">
+    <div className="sm:flex gap-16 lg:flex flex-row items-start ">
       {statuses.map((status, index) => (
         <TasksSection
           key={index}

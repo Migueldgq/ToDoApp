@@ -54,7 +54,7 @@ export const TasksSection = ({
   return (
     <div
       ref={drop}
-      className={`w-64 rounded-md p-2 ${isOver ? "bg-slate-200" : ""}`}
+      className={`taskcard w-64 rounded-md p-2 ${isOver ? "bg-slate-200" : ""}`}
     >
       <Header text={text} bg={bg} count={tasksToMap.length} />
       {tasksToMap.length > 0 &&
